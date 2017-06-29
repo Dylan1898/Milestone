@@ -6,6 +6,7 @@
 }
 button{
     float: left;
+    clear:both
 }
 
 para{
@@ -24,3 +25,4 @@ h2{
     float:left;
     clear:both 
 }
+

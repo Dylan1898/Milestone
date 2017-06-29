@@ -1,7 +1,10 @@
+var sentences= "I once ate a frog who sat on a log"
+var wordSent= sentences.split(' ')
+var li= document.createElement('li')
 // 1
 document.addEventListener("DOMContentLoaded", function () {
     var button = document.createElement('button')
-    document.body.appendChild(button)
+    document.getElementById('1').appendChild(button)
     button.addEventListener('click', myAlert)
     function myAlert(){
         console.log('workd')
@@ -35,23 +38,22 @@ mkSpan.addEventListener('click', myName)
 function myName(){
     var span= document.createElement('span');
     span.innerHTML = 'Dylan'
-    document.getElementById('thing').appendChild(span)
-    
+    document.getElementById('thing').appendChild(span)   
 }
-
 // 6
 var fakeFriends = ['Elmo', 'Big Bird', 'Cookie Monster', "Rick", "Morty", "Larry", "Dwayne", "Wilbur", "Charlotte", "Orwell" ]
-friendCounter=-1
+// friendCounter=-1
 friends.addEventListener('click', myDelusions)
 function myDelusions(){
-    if (friendCounter<=fakeFriends.length){
-     friendCounter++
-    var li= document.createElement(li)
-    li.innerHTML= fakeFriends[friendCounter]
-    document.getElementById('list').appendChild(li)
+    for(i=0; i<fakeFriends.length; i++){
+       var li= document.createElement('li');
+       li.innerHTML= fakeFriends[i];
+       document.getElementById('list').appendChild(li)
+    }    
+        for (i=0; i<fakeFriends.length; i++){
+            // var li= document.createElement('li')
+            li.innerHTML=''
+            li.innerHTML=wordSent[i];
+            document.getElementById('list').appendChild(li)
 }
-    else {
-        return "You have no more friends!! How sad!"
-    }
-    
 }
